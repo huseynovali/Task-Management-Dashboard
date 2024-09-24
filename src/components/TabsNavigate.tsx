@@ -4,7 +4,7 @@ import { useLocation } from "react-router";
 function TabsNavigate() {
   const params = useLocation();
   const activeTab = params.pathname.split("/")[1];
-
+  console.log(activeTab);
   return (
     <div className="py-8">
       {constants.sidebarLinks.map((link) => (
@@ -18,7 +18,9 @@ function TabsNavigate() {
           </div>
           <span
             className={`"text-[12px] font-semibold leading-12"   ${
-              activeTab == link.title ? "text-[#141522]" : "text-[#8E92BC]"
+              activeTab == link.title.toLocaleLowerCase()
+                ? "text-[#141522]"
+                : "text-[#8E92BC]"
             }`}
           >
             {link.title}
