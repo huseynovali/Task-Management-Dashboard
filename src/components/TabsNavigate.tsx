@@ -1,6 +1,5 @@
-import React from "react";
 import constants from "../constants/constants";
-import { useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 
 function TabsNavigate() {
   const params = useLocation();
@@ -10,10 +9,12 @@ function TabsNavigate() {
     <div className="py-8">
       {constants.sidebarLinks.map((link) => (
         <div
-          className={"flex items-center px-[20px] py-[10px] gap-x-2 active:bg-[#F5F5F7] rounded-[10px] my-[24px]"}
+          className={
+            "flex items-center px-[20px] py-[10px] gap-x-2 active:bg-[#F5F5F7] rounded-[10px] my-[16px]"
+          }
         >
-          <div className=" h-[24px] w-[24px]">
-            <img src={link.icon} height={24} width={24} alt="logo" />
+          <div className=" h-[24px] w-[24px] text-yellow-900">
+            <img src={link.icon} alt="" />
           </div>
           <span
             className={`"text-[12px] font-semibold leading-12"   ${

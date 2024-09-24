@@ -8,7 +8,7 @@ const constants = {
     {
       title: "Owerview",
       href: "/owerview",
-      icon: category2,
+      icon: category2
     },
     {
       title: "Task",
@@ -32,5 +32,6 @@ const constants = {
     },
   ],
 };
+
 
 export default constants;
