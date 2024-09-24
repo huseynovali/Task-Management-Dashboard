@@ -5,11 +5,11 @@ import Navbar from "./Navbar";
 function MainLayout() {
   return (
     <div>
-      <div className="grid grid-cols-12">
-        <div className="col-span-2 bg-red-100">
+      <div className="flex">
+        <div className="">
           <Sidebar />
         </div>
-        <div className="grid-cols-10">
+        <div className="">
           <Navbar />
           <Outlet />
         </div>
