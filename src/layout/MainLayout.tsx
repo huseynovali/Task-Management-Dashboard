@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
+import Account from "./Account";
+
 
 function MainLayout() {
   return (
@@ -9,8 +10,8 @@ function MainLayout() {
         <div className="">
           <Sidebar />
         </div>
-        <div className="">
-          <Navbar />
+        <div className="bg-[#fafafa] relative w-full py-8">
+          <Account/>
           <Outlet />
         </div>
       </div>
