@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { addDays, startOfWeek } from "date-fns";
 
 function WeeklyCalendar() {
@@ -9,7 +9,7 @@ function WeeklyCalendar() {
     addDays(start, index)
   );
 
-  const formatDate = (date) => {
+  const formatDate = (date: Date) => {
     return new Intl.DateTimeFormat("en-US", { day: "numeric" }).format(date);
   };
 
@@ -35,10 +35,10 @@ function WeeklyCalendar() {
           {">"}
         </button>
       </div>
-      <div className="calendar-week">
+      <div className="flex justify-between">
         {daysOfWeek.map((date) => (
           <div
-            key={date}
+            key={formatDate(date)}
             className="calendar-day"
             onClick={() => setCurrentDate(date)}
           >
