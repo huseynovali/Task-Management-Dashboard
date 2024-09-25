@@ -9,16 +9,12 @@ import emp3 from "../assets/emp3.png";
 import emp4 from "../assets/emp4.png";
 import emp5 from "../assets/emp5.png";
 
-
-
-
-
 const constants = {
   sidebarLinks: [
     {
       title: "Owerview",
       href: "/owerview",
-      icon: category2
+      icon: category2,
     },
     {
       title: "Task",
@@ -63,9 +59,18 @@ const constants = {
       position: "Project Manager",
       img: emp4,
     },
-  ]
-  
+  ],
+  taskDetails: [
+    {
+      detail: "Understanding the tools in Figma",
+    },
+    {
+      detail: "Understand the basics of making designs",
+    },
+    {
+      detail: "Design a mobile application with figma",
+    },
+  ],
 };
-
 
 export default constants;

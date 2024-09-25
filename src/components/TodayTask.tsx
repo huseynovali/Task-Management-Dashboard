@@ -1,6 +1,7 @@
 import { useState } from "react";
 import taskImg1 from "../assets/task-image.png";
 import TaskEmp from "./TaskEmp";
+import constants from "../constants/constants";
 function TodayTask() {
   const [progress, setProgress] = useState(70);
 
@@ -42,7 +43,10 @@ function TodayTask() {
         <p className=" text-xs text-[#54577A]">UI /UX Designer</p>
       </div>
       <div className="my-5">
-        <h2>Progress</h2>
+        <div className="flex justify-between items-center">
+          <h2>Progress</h2>
+          <p className=" text-[16px] text-[#546FFF]">{progress}%</p>
+        </div>
         <div className="progress-bar h-2 w-full bg-[#BAC8FF] mt-3 rounded-md relative">
           <div
             style={{ width: `${progress}%` }}
@@ -81,6 +85,23 @@ function TodayTask() {
           <div className="text-[16px] text-[#141522] ml-2">1 Hour</div>
         </div>
         <TaskEmp />
+      </div>{" "}
+      <div className="line border border-[#F5F5F7] my-5"></div>
+      <div>
+        <div className="flex justify-between items-center">
+          <h2 className="font-semibold">Detail Task</h2>
+          <p className=" text-xs text-[#54577A]">UI /UX Designer</p>
+        </div>
+        <div className="mt-5">
+          {constants.taskDetails.map((task, index) => (
+            <div className="flex items-center my-5 " key={index}>
+              <div className="rounded-xl bg-[#F5F5F7] w-[36px] h-[36px] flex justify-center items-center text-sm">
+                {index + 1}
+              </div>
+              <p className="text-sm ml-3 text-[#141522]">{task.detail}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
