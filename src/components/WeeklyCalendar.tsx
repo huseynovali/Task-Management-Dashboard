@@ -14,7 +14,7 @@ function WeeklyCalendar() {
   };
 
   return (
-    <div className="p-5 bg-white rounded-md">
+    <div className="p-5 bg-white rounded-md overflow-x-auto">
       <div className="w-full mb-5 flex justify-between items-center px-2">
         <button
           onClick={() => setCurrentDate(addDays(currentDate, -7))}

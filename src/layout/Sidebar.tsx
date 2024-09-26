@@ -1,10 +1,9 @@
 import logoImg from "../assets/book-square.png";
 import TabsNavigate from "../components/sidebar/TabsNavigate";
-
 import HelpCenter from "../components/sidebar/HelpCenter";
 function Sidebar() {
   return (
-    <div className="p-8 w-[256px]">
+    <div className="p-8 w-[256px] h-screen sticky top-0 bg-white hidden md:block">
       <div className="logo flex items-start gap-x-3">
         <div className="flex h-[40px] w-[40px] flex-shrink-0">
           <img src={logoImg} height={40} width={40} alt="logo" />

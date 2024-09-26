@@ -2,7 +2,7 @@ import user from "../assets/Profil.png";
 import notification from "../assets/Notification.png";
 function Account() {
   return (
-    <div className="absolute flex items-center gap-x-5 top-0 right-0 py-8 px-8">
+    <div className="absolute flex items-center gap-x-5 top-0 right-0 md:py-8 md:px-8 px-5 py-5">
       <div className="left">
         <div
           className="
@@ -18,6 +18,7 @@ function Account() {
       <div className="right rounded-full w-[52px] h-[52px] cursor-pointer border hover:border-[#dddddf]">
         <img src={user} alt="" />
       </div>
+     
     </div>
   );
 }

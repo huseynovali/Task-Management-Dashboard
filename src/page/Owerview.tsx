@@ -1,13 +1,17 @@
+import OwerviewPage from "../components/OwerviewPage";
 import OwerviewSidear from "../components/sidebar/OwerviewSidear";
-import MainLayout from "../layout/MainLayout";
+import Account from "../layout/Account";
+import Sidebar from "../layout/Sidebar";
 
 function Owerview() {
   return (
-    <div className="grid grid-cols-7">
-      <div className="col-span-5">
-        <MainLayout />
+    <div className="grid md:grid-cols-7">
+      <div className="md:col-span-5 relative bg-[#fafafa] flex">
+        <Sidebar />
+        <Account />
+        <OwerviewPage />
       </div>
-      <div className="col-span-2">
+      <div className="md:col-span-2 w-full">
         <OwerviewSidear />
       </div>
     </div>
