@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+.recharts-cartesian-axis-tick-line {
+  display: none;
+}
+.recharts-cartesian-axis-tick,
+.recharts-layer {
+  font-size: 12px;
+  font-weight: 500;
+  color: #141522;
+  right: 20px !important;
+}
+.recharts-cartesian-axis-line {
+  background-color: #f5f5f7 !important;
+}
+.swiper-slide {
+  width: auto !important; /* Slayt genişliğini otomatik yapar */
+}
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+  font-size: 24px;
+  z-index: 1;
+}
+
+.mySwiper .swiper-button-prev {
+  left: 90%;
+  top: 10px;
+}
+.mySwiper .swiper-button-next {
+  right: 10px;
+  top: 10px;
+}
+
+.swiper-slide {
+  display: flex !important;
+  height: 100% !important;
+  align-items: end !important;
+
+}

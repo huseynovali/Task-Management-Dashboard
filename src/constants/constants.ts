@@ -71,6 +71,45 @@ const constants = {
       detail: "Design a mobile application with figma",
     },
   ],
+
+
+  monthlyMentors: [
+    {
+      name: "Alice Johnson",
+      position: "Frontend Developer",
+      taskSize: 50,
+      reviews: 1200,
+      img: emp1, 
+      rating: 4.8,
+    },
+    {
+      name: "Mark Twain",
+      position: "Backend Developer",
+      taskSize: 35,
+      reviews: 950,
+      img: emp2,
+      rating: 4.7,
+    },
+    {
+      name: "Marie Curie",
+      position: "Data Scientist",
+      taskSize: 45,
+      reviews: 860,
+      img: emp3, 
+      rating: 4.6,
+    },
+    {
+      name: "Steve Jobs",
+      position: "Product Designer",
+      taskSize: 60,
+      reviews: 1500,
+      img: emp4,
+      rating: 4.9,
+    },
+  ]
+  
+    
+  
 };
 
 export default constants;

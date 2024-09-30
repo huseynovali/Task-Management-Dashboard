@@ -1,6 +1,17 @@
+import { useEffect, useState } from "react";
+import CircularProgressBar from "./CircularProgressbar";
+import TaskLineChart from "./TaskLineChart";
+import MonthMentorSlide from "./MonthMentorSlide";
+
 function OwerviewPage() {
+  const [percentage, setPercentage] = useState(0);
+
+  useEffect(() => {
+    setPercentage(45);
+  }, []);
+
   return (
-    <div className="p-8 md:p-5  ">
+    <div className="p-8 md:p-5 w-full ">
       <div className="menu_icon  md:hidden border border-[#F5F5F7] rounded-full w-[44px] h-[44px] flex items-center justify-center">
         <svg
           width="24"
@@ -40,7 +51,46 @@ function OwerviewPage() {
           Let's finish your task today!
         </p>
       </div>
-      <div></div>
+      <div className="pt-16 grid grid-cols-12 gap-x-2">
+        <div className="p-5 bg-[#141522] text-white rounded-[10px] col-span-3">
+          <h2>Running Task</h2>
+          <p className="py-4 text-[32px]">65</p>
+
+          <div className="flex items-center">
+            <CircularProgressBar percentage={percentage} />
+            <div className="ml-3">
+              <p className="text-[20px] font-semibold">100</p>
+              <p className="text-[#8E92BC] text-sm font-medium">Task</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-span-9 pl-10">
+          <div className="bg-[#F5F5F7] p-5 rounded-[10px]">
+            <div>
+              <div className="flex justify-between items-center pb-5">
+                <h2 className="text-[20px] font-semibold">Activity</h2>
+                <select name="" id="" className="bg-transparent outline-none">
+                  <option value="" className="text-xs">
+                    This Week
+                  </option>
+                </select>
+              </div>
+            </div>
+            <TaskLineChart />
+          </div>
+        </div>
+      </div>
+
+      <div className="relative">
+        <div className="flex justify-between items-center  absolute">
+          <h2 className="text-2xl font-semibold  text-[#141522]">
+            Monthly Mentors
+          </h2>
+        </div>
+        <div className="flex h-[200px] w-full items-end relative mt-10">
+          <MonthMentorSlide />
+        </div>
+      </div>
     </div>
   );
 }

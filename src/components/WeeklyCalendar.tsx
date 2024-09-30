@@ -39,7 +39,7 @@ function WeeklyCalendar() {
         {daysOfWeek.map((date) => (
           <div
             key={formatDate(date)}
-            className="calendar-day"
+            className="calendar-day cursor-pointer"
             onClick={() => setCurrentDate(date)}
           >
             <div
