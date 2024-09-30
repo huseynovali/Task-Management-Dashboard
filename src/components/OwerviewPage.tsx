@@ -51,11 +51,12 @@ function OwerviewPage() {
           Let's finish your task today!
         </p>
       </div>
-      <div className="pt-16 grid grid-cols-12 gap-x-2">
-        <div className="p-5 bg-[#141522] text-white rounded-[10px] col-span-3">
-          <h2>Running Task</h2>
-          <p className="py-4 text-[32px]">65</p>
-
+      <div className="pt-16 lg:flex ">
+        <div className="p-5 bg-[#141522] text-white rounded-[10px] lg:w-[200px] flex lg:flex-col justify-between mb-3 lg:mb-0">
+          <div>
+            <h2>Running Task</h2>
+            <p className="py-4 text-[32px]">65</p>
+          </div>
           <div className="flex items-center">
             <CircularProgressBar percentage={percentage} />
             <div className="ml-3">
@@ -64,7 +65,7 @@ function OwerviewPage() {
             </div>
           </div>
         </div>
-        <div className="col-span-9 pl-10">
+        <div className="lg:pl-10 w-full">
           <div className="bg-[#F5F5F7] p-5 rounded-[10px]">
             <div>
               <div className="flex justify-between items-center pb-5">
@@ -87,7 +88,7 @@ function OwerviewPage() {
             Monthly Mentors
           </h2>
         </div>
-        <div className="flex h-[200px] w-full items-end relative mt-10">
+        <div className="flex h-[200px] !overflow-hidden items-end relative mt-10 ">
           <MonthMentorSlide />
         </div>
       </div>

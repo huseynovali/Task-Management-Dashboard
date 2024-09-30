@@ -106,6 +106,23 @@ const constants = {
       img: emp4,
       rating: 4.9,
     },
+    {
+      name: "Marie Curie",
+      position: "Data Scientist",
+      taskSize: 45,
+      reviews: 860,
+      img: emp3, 
+      rating: 4.6,
+    },
+    {
+      name: "Steve Jobs",
+      position: "Product Designer",
+      taskSize: 60,
+      reviews: 1500,
+      img: emp4,
+      rating: 4.9,
+    },
+
   ]
   
     
