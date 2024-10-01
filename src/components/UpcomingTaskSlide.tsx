@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
-function MonthMentorSlide() {
+function UpcomingTaskSlide() {
   return (
     <div className=" max-[360px]:w-[290px] max-[395px]:w-[310px] w-[340px] md:w-[700px] lg:w-[790px] h-full ">
       <Swiper
@@ -117,4 +117,4 @@ function MonthMentorSlide() {
   );
 }
 
-export default MonthMentorSlide;
+export default UpcomingTaskSlide;

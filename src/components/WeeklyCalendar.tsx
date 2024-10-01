@@ -35,12 +35,17 @@ function WeeklyCalendar() {
           {">"}
         </button>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between md-[]">
         {daysOfWeek.map((date) => (
-          <div
+          <button
             key={formatDate(date)}
             className="calendar-day cursor-pointer"
             onClick={() => setCurrentDate(date)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                setCurrentDate(date);
+              }
+            }}
           >
             <div
               className={`flex flex-col items-center  rounded-3xl p-1 transition-all  ${
@@ -66,7 +71,7 @@ function WeeklyCalendar() {
                 {formatDate(date)}
               </span>
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>

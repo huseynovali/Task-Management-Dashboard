@@ -1,11 +1,10 @@
+import React from "react";
 
-import constants from "../constants/constants";
-
-function TaskEmp() {
+function TaskEmp({ employees }) {
   return (
     <div className="flex">
-      {constants.taskEmploees.map((emp, index) => (
-        <div className="relative group">
+      {employees.map((emp, index) => (
+        <div className="relative group" key={index}>
           <img
             src={emp.img}
             alt=""

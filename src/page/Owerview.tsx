@@ -5,13 +5,13 @@ import Sidebar from "../layout/Sidebar";
 
 function Owerview() {
   return (
-    <div className="grid md:grid-cols-7">
-      <div className="md:col-span-5 relative bg-[#fafafa] flex">
+    <div className="grid lg:grid-cols-7">
+      <div className="lg:col-span-5 relative bg-[#fafafa] flex">
         <Sidebar />
         <Account />
         <OwerviewPage />
       </div>
-      <div className="md:col-span-2 w-full">
+      <div className="lg:col-span-2 w-full">
         <OwerviewSidear />
       </div>
     </div>

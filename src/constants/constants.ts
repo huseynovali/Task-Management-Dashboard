@@ -8,6 +8,8 @@ import emp2 from "../assets/emp2.png";
 import emp3 from "../assets/emp3.png";
 import emp4 from "../assets/emp4.png";
 import emp5 from "../assets/emp5.png";
+import task1 from "../assets/task1.png";
+import task2 from "../assets/task2.png";
 
 const constants = {
   sidebarLinks: [
@@ -72,14 +74,13 @@ const constants = {
     },
   ],
 
-
   monthlyMentors: [
     {
       name: "Alice Johnson",
       position: "Frontend Developer",
       taskSize: 50,
       reviews: 1200,
-      img: emp1, 
+      img: emp1,
       rating: 4.8,
     },
     {
@@ -95,7 +96,7 @@ const constants = {
       position: "Data Scientist",
       taskSize: 45,
       reviews: 860,
-      img: emp3, 
+      img: emp3,
       rating: 4.6,
     },
     {
@@ -111,7 +112,7 @@ const constants = {
       position: "Data Scientist",
       taskSize: 45,
       reviews: 860,
-      img: emp3, 
+      img: emp3,
       rating: 4.6,
     },
     {
@@ -122,11 +123,67 @@ const constants = {
       img: emp4,
       rating: 4.9,
     },
-
-  ]
-  
-    
-  
+  ],
+  upcomingTasks: [
+    {
+      name: "Creating Mobile App Design",
+      team: "UI/UX Design",
+      date: "3 Days Left",
+      img: task1,
+      progres: 75,
+      taskEmployes: [
+        {
+          name: "Alice Smith",
+          position: "Frontend Developer",
+          img: emp1,
+        },
+        {
+          name: "Bob Johnson",
+          position: "Backend Developer",
+          img: emp2,
+        },
+        {
+          name: "Charlie Brown",
+          position: "UI/UX Designer",
+          img: emp3,
+        },
+        {
+          name: "Diana Williams",
+          position: "Project Manager",
+          img: emp4,
+        },
+      ],
+    },
+    {
+      name: "Creating Perfect Website",
+      team: "Web Developer",
+      date: "4 Days Left",
+      img: task2,
+      progres: 85,
+      taskEmployes: [
+        {
+          name: "Alice Smith",
+          position: "Frontend Developer",
+          img: emp1,
+        },
+        {
+          name: "Bob Johnson",
+          position: "Backend Developer",
+          img: emp2,
+        },
+        {
+          name: "Charlie Brown",
+          position: "UI/UX Designer",
+          img: emp3,
+        },
+        {
+          name: "Diana Williams",
+          position: "Project Manager",
+          img: emp4,
+        },
+      ],
+    },
+  ],
 };
 
 export default constants;
