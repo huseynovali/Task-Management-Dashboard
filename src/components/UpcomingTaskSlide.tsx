@@ -34,7 +34,9 @@ function UpcomingTaskSlide() {
       >
         {constants.upcomingTasks.map((upcomingTask, index) => (
           <SwiperSlide key={index}>
-            <TaskCard data={upcomingTask} /> {/* Correctly pass data */}
+            <div className="p-5  w-full  bg-white rounded-[10px] ">
+              <TaskCard data={upcomingTask} /> {/* Correctly pass data */}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
