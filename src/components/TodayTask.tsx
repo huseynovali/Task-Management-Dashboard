@@ -36,9 +36,16 @@ function TodayTask() {
           </svg>
         </div>
       </div>
-      <TaskCard data={{img:taskImg1,progress: progress, name: "Creating Awesome Mobile Apps", date: "1 Hour", team: "UI/UX Design", taskEmployes: constants.taskEmploees}} />
-
-
+      <TaskCard
+        data={{
+          img: taskImg1,
+          progress: progress,
+          name: "Creating Awesome Mobile Apps",
+          date: "1 Hour",
+          team: "UI/UX Design",
+          taskEmployes: constants.taskEmploees,
+        }}
+      />
       <div className="line border border-[#F5F5F7] my-5"></div>
       <div>
         <div className="flex justify-between items-center">

@@ -1,7 +1,21 @@
-import React from "react";
 import TaskEmp from "./TaskEmp";
 
-function TaskCard({ data }) {
+interface TaskCardProps {
+  data: {
+    img: string;
+    name: string;
+    team: string;
+    progress: number;
+    date: string;
+    taskEmployes: {
+      img: string;
+      name: string;
+      position: string;
+    }[];
+  };
+}
+
+function TaskCard({ data }: Readonly<TaskCardProps>) {
   return (
     <div>
       <div className="my-5">

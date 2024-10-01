@@ -100,7 +100,7 @@ function OwerviewPage() {
             Upcoming Task
           </h2>
         </div>
-        <div className="flex h-[200px] !overflow-hidden items-end relative mt-10 ">
+        <div className="flex h-[350px] !overflow-hidden items-end relative mt-10 ">
           <UpcomingTaskSlide />
         </div>
       </div>

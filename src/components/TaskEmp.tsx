@@ -1,6 +1,12 @@
-import React from "react";
 
-function TaskEmp({ employees }) {
+interface Employee {
+  img: string;
+  name: string;
+  position: string;
+}
+
+
+function TaskEmp({ employees }: Readonly<{ employees: Employee[] }>) {
   return (
     <div className="flex">
       {employees.map((emp, index) => (
