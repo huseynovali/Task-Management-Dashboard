@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import constants from "../../constants/constants";
 import { useLocation } from "react-router";
 
@@ -8,7 +9,8 @@ function TabsNavigate() {
   return (
     <div className="py-8">
       {constants.sidebarLinks.map((link) => (
-        <div
+        <Link
+          to={link.href}
           className={
             "flex items-center px-[20px] py-[10px] gap-x-2 active:bg-[#F5F5F7] rounded-[10px] my-[16px]"
           }
@@ -25,7 +27,7 @@ function TabsNavigate() {
           >
             {link.title}
           </span>
-        </div>
+        </Link>
       ))}
     </div>
   );

@@ -212,6 +212,64 @@ const constants = {
         },
       ],
     },
+    {
+      name: "Creating Perfect Website",
+      team: "Web Developer",
+      date: "4 Days Left",
+      img: task2,
+      progress: 85, 
+      taskEmployes: [
+        {
+          name: "Alice Smith",
+          position: "Frontend Developer",
+          img: emp1,
+        },
+        {
+          name: "Bob Johnson",
+          position: "Backend Developer",
+          img: emp2,
+        },
+        {
+          name: "Charlie Brown",
+          position: "UI/UX Designer",
+          img: emp3,
+        },
+        {
+          name: "Diana Williams",
+          position: "Project Manager",
+          img: emp4,
+        },
+      ],
+    },
+    {
+      name: "Creating Mobile App Design",
+      team: "UI/UX Design",
+      date: "3 Days Left",
+      img: task1,
+      progress: 75,
+      taskEmployes: [
+        {
+          name: "Alice Smith",
+          position: "Frontend Developer",
+          img: emp1,
+        },
+        {
+          name: "Bob Johnson",
+          position: "Backend Developer",
+          img: emp2,
+        },
+        {
+          name: "Charlie Brown",
+          position: "UI/UX Designer",
+          img: emp3,
+        },
+        {
+          name: "Diana Williams",
+          position: "Project Manager",
+          img: emp4,
+        },
+      ],
+    },
   ],
   
 };
