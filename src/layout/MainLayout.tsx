@@ -6,7 +6,7 @@ function MainLayout() {
   return (
     <div className="flex ">
       <Sidebar />
-      <div className="bg-[#fafafa] relative w-full py-8">
+      <div className="bg-[#fafafa] relative w-full ">
         <Account />
         <Outlet />
       </div>
