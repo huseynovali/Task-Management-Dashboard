@@ -271,6 +271,45 @@ const constants = {
       ],
     },
   ],
+  mentors: [
+    {
+      name: "Alice Johnson",
+      position: "Frontend Developer",
+      taskSize: 50,
+      reviews: 1200,
+      img: emp1,
+      rating: 4.8,
+      text: "Hi, I'm Alice Johnson. I am a skilled frontend developer with over 5 years of experience in creating responsive and user-friendly web applications. I'm passionate about clean code and cutting-edge web technologies."
+    },
+    {
+      name: "Mark Twain",
+      position: "Backend Developer",
+      taskSize: 35,
+      reviews: 950,
+      img: emp2,
+      rating: 4.7,
+      text: "Hello, I'm Mark Twain. I specialize in backend development, building scalable and secure server-side architectures. With 7 years of experience, I focus on efficiency and optimizing performance."
+    },
+    {
+      name: "Marie Curie",
+      position: "Data Scientist",
+      taskSize: 45,
+      reviews: 860,
+      img: emp3,
+      rating: 4.6,
+      text: "Hi, I'm Marie Curie, a data scientist with a deep passion for uncovering hidden insights from complex datasets. With a background in statistical analysis and machine learning, I have helped businesses make data-driven decisions."
+    },
+    {
+      name: "Steve Jobs",
+      position: "Product Designer",
+      taskSize: 60,
+      reviews: 1500,
+      img: emp4,
+      rating: 4.9,
+      text: "Hi, I'm Steve Jobs, a creative product designer with a knack for creating intuitive and innovative user experiences. With over 10 years of experience, I strive to design products that delight and inspire users."
+    },
+  ]
+  
   
 };
 

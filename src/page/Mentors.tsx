@@ -202,11 +202,20 @@ function Mentors() {
             >
               {constants.monthlyMentors.map((employee, index) => (
                 <SwiperSlide key={index}>
-                   <EmployeeCard employee={employee} />
+                  <EmployeeCard employee={employee} />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
+        </div>
+      </div>
+
+      <div className="p-8  mt-8">
+        <h2 className="font-semibold text-[24px]">Mentors</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
+          {constants.mentors.map((mentor, index) => (
+            <EmployeeCard key={index} employee={mentor} />
+          ))}
         </div>
       </div>
     </div>

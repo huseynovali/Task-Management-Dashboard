@@ -5,6 +5,7 @@ interface Employee {
   taskSize: number;
   rating: number;
   reviews: number;
+  text?: string;
 }
 
 interface EmployeeCardProps {
@@ -30,6 +31,10 @@ function EmployeeCard({ employee }: EmployeeCardProps) {
           + Follow
         </button>
       </div>
+      {employee.text ? (
+        <p className="text-[#8E92BC] text-sm mt-3 font-medium">{employee.text}</p>
+      ) : null}
+
       <div className="flex justify-between mt-3">
         <div className="flex items-center">
           <svg
