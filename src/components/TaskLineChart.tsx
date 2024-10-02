@@ -43,9 +43,9 @@ const TaskLineChart = () => {
   return (
     <ResponsiveContainer
       height={130}
-      className={"bg-white rounded-lg p-3"}
+      className={"bg-white rounded-lg p-3 z-0 "}
     >
-      <LineChart data={data}>
+      <LineChart data={data} className="z-0">
         {" "}
         <CartesianGrid strokeDasharray="0" horizontal={false} vertical={true} />
         <XAxis dataKey="day" />

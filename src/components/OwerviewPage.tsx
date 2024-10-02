@@ -3,6 +3,7 @@ import CircularProgressBar from "./CircularProgressbar";
 import TaskLineChart from "./TaskLineChart";
 import MonthMentorSlide from "./MonthMentorSlide";
 import UpcomingTaskSlide from "./UpcomingTaskSlide";
+import SidebarMobile from "./sidebar/SidebarMobile";
 
 function OwerviewPage() {
   const [percentage, setPercentage] = useState(0);
@@ -10,10 +11,10 @@ function OwerviewPage() {
   useEffect(() => {
     setPercentage(45);
   }, []);
-
+  const [open, setOpen] = useState(false);
   return (
     <div className="p-8 lg:p-5 w-full ">
-      <div className="menu_icon  lg:hidden border border-[#F5F5F7] rounded-full w-[44px] h-[44px] flex items-center justify-center">
+      <button onClick={()=>setOpen(!open)} className="menu_icon  lg:hidden border border-[#F5F5F7] rounded-full w-[44px] h-[44px] flex items-center justify-center">
         <svg
           width="24"
           height="24"
@@ -24,22 +25,29 @@ function OwerviewPage() {
           <path
             d="M3 7H21"
             stroke="#8E92BC"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
           <path
             d="M3 12H21"
             stroke="#8E92BC"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
           <path
             d="M3 17H21"
             stroke="#8E92BC"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
         </svg>
+      </button>
+      <div
+        className={`${
+          open ? "w-[200px] opacity-100" : "w-0 opacity-0 "
+        } h-screen  bg-white absolute inset-0 lg:hidden z-50 transition-all duration-300 ease-in-out`}
+      >
+        <SidebarMobile  open ={open} setOpen={setOpen}/>
       </div>
 
       <div className="line md:hidden w-full h-0 border border-[#F5F5F7] absolute left-0 bottom-32"></div>
@@ -66,7 +74,7 @@ function OwerviewPage() {
             </div>
           </div>
         </div>
-        <div className="md:pl-10 w-full">
+        <div className="md:pl-10 w-full z-0">
           <div className="bg-[#F5F5F7] p-5 rounded-[10px]">
             <div>
               <div className="flex justify-between items-center pb-5">
