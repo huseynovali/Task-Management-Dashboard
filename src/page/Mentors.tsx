@@ -1,25 +1,24 @@
-import UpcomingTaskSlide from "../components/UpcomingTaskSlide";
-import TaskCard from "../components/TaskCart";
-import constants from "../constants/constants";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide, Swiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import constants from "../constants/constants";
+import EmployeeCard from "../components/EmployeeCard";
 
-function Task() {
+function Mentors() {
   return (
     <div className="pb-8">
       <div className="p-8 bg-white">
-        <h1 className="font-semibold text-[24px]">Explore Task</h1>
+        <h1 className="font-semibold text-[24px]">Explore Mentors</h1>
 
         <div className="pt-10 flex items-center justify-between">
           <div className="border border-[#F5F5F7] flex items-center rounded-[10px] pr-3">
             <input
               type="text"
               className="border-none outline-none pb-[14px] pt-[7px] px-[28px] w-full rounded-[10px] placeholder:text-xs placeholder:text-[#54577A] placeholder:leading-tight"
-              placeholder="Search Task"
+              placeholder="Search Mentors"
             />
             <svg
               width="20"
@@ -105,7 +104,7 @@ function Task() {
                 />
               </svg>
               <span className="ml-2 text-xs font-semibold ">
-                Sort By : Deadline
+                Sort By : Popular
               </span>
             </div>
           </div>
@@ -170,17 +169,19 @@ function Task() {
           </div>
         </div>
       </div>
+
       <div className="relative px-8">
         <div className="flex justify-between items-center  absolute">
-          <h2 className="text-2xl font-semibold  text-[#141522]">Time Limit</h2>
+          <h2 className="text-2xl font-semibold  text-[#141522]">
+            Recent Mentors
+          </h2>
         </div>
-        <div className="flex h-[400px] !overflow-hidden items-end relative mt-10 ">
+        <div className="flex h-[200px] !overflow-hidden items-end relative mt-10 ">
           <div className=" max-[360px]:w-[290px] max-[395px]:w-[310px] w-[340px] md:w-[700px] lg:w-[1180px] h-full ">
             <Swiper
               navigation={true}
               mousewheel={true}
               keyboard={true}
-              grabCursor={true}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
               slidesPerView={1}
               breakpoints={{
@@ -193,57 +194,15 @@ function Task() {
                   spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 30,
                 },
               }}
               className="mySwiper w-full h-full relative "
             >
-              {constants.upcomingTasks.map((upcomingTask, index) => (
+              {constants.monthlyMentors.map((employee, index) => (
                 <SwiperSlide key={index}>
-                  <div className="p-5  w-full  bg-white rounded-[10px] ">
-                    <TaskCard data={upcomingTask} /> {/* Correctly pass data */}
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
-      </div>
-      <div className="relative px-8">
-        <div className="flex justify-between items-center  absolute">
-          <h2 className="text-2xl font-semibold  text-[#141522]">New Task</h2>
-        </div>
-        <div className="flex h-[400px] !overflow-hidden items-end relative mt-10 ">
-          <div className=" max-[360px]:w-[290px] max-[395px]:w-[310px] w-[340px] md:w-[700px] lg:w-[1180px] h-full ">
-            <Swiper
-              navigation={true}
-              mousewheel={true}
-              keyboard={true}
-              grabCursor={true}
-              modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              slidesPerView={1}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-              }}
-              className="mySwiper w-full h-full relative "
-            >
-              {constants.upcomingTasks.map((upcomingTask, index) => (
-                <SwiperSlide key={index}>
-                  <div className="p-5  w-full  bg-white rounded-[10px] ">
-                    <TaskCard data={upcomingTask} /> {/* Correctly pass data */}
-                  </div>
+                   <EmployeeCard employee={employee} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -254,4 +213,4 @@ function Task() {
   );
 }
 
-export default Task;
+export default Mentors;

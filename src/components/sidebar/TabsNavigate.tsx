@@ -8,8 +8,9 @@ function TabsNavigate() {
   console.log(activeTab);
   return (
     <div className="py-8">
-      {constants.sidebarLinks.map((link) => (
+      {constants.sidebarLinks.map((link, index) => (
         <Link
+          key={index}
           to={link.href}
           className={
             "flex items-center px-[20px] py-[10px] gap-x-2 active:bg-[#F5F5F7] rounded-[10px] my-[16px]"
